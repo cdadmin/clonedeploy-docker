@@ -24,7 +24,7 @@ LABEL org.freenas.interactive="false" \
           {							\
               \"name\": \"/tftpboot\",				\
               \"descr\": \"Tftp Volume\"			\
-          }		
+          }		\
       ]"							\
       org.freenas.settings="[ 					\
           {							\
@@ -41,5 +41,5 @@ LABEL org.freenas.interactive="false" \
               \"env\": \"MYSQL_ROOT_PASS\",			\
               \"descr\": \"MYSQL Root Password\",			\
               \"optional\": true				\
-          }							
+          }		\					
       ]"
