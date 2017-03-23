@@ -94,6 +94,7 @@ VOLUME  ["/var/www/html", "/tftpboot", "/cd_dp", "/var/lib/mysql"]
 
 COPY docker-entrypoint.sh /entrypoint.sh 
 COPY cd.sql /usr/src/clonedeploy/
-
+#Fix a permission issue specific to FreeNAS Datasets
+COPY FileOps.cs /usr/src/clonedeploy/web/App_Code/Helpers/
 ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
