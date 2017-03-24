@@ -90,7 +90,7 @@ fix_permissions() {
 chown -R www-data /tftpboot /cd_dp /var/www/html
 chmod 1777 /tmp
 chown -R www-data:cdsharewriters /cd_dp
-chmod -R 2775 /cd_dp
+chmod -R 2777 /cd_dp
 ln -s ../../images /tftpboot/proxy/bios/images
 ln -s ../../images /tftpboot/proxy/efi32/images
 ln -s ../../images /tftpboot/proxy/efi64/images
