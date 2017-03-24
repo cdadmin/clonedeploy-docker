@@ -96,5 +96,7 @@ COPY docker-entrypoint.sh /entrypoint.sh
 COPY cd.sql /usr/src/clonedeploy/
 #Fix a permission issue specific to FreeNAS Datasets
 COPY FileOps.cs /usr/src/clonedeploy/web/App_Code/Helpers/
+#Add a version file
+COPY version /usr/src/clonedeploy/
 ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
