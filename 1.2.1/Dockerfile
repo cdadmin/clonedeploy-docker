@@ -5,6 +5,7 @@ LABEL maintainer "cdadmin@clonedeploy.org"
 ENV DEBIAN_FRONTEND=noninteractive \
 	CLONEDEPLOY_VERSION=1.2.0 \
 	CLONEDEPLOY_PATCH=1.2.1 \
+	BUILD_VERSION=1.2.1.0001 \
 	LOAD_TFTP=true \
 	LOAD_SMB=true \
 	RW_SMB_PASS=rwpass \
@@ -97,6 +98,6 @@ COPY cd.sql /usr/src/clonedeploy/
 #Fix a permission issue specific to FreeNAS Datasets
 COPY FileOps.cs /usr/src/clonedeploy/web/App_Code/Helpers/
 #Add a version file
-COPY version /usr/src/clonedeploy/
+COPY version /usr/src/clonedeploy/web/
 ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
