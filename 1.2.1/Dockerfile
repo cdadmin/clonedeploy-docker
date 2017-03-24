@@ -5,7 +5,7 @@ LABEL maintainer "cdadmin@clonedeploy.org"
 ENV DEBIAN_FRONTEND=noninteractive \
 	CLONEDEPLOY_VERSION=1.2.0 \
 	CLONEDEPLOY_PATCH=1.2.1 \
-	BUILD_VERSION=1.2.1.0001 \
+	BUILD_VERSION=1.2.1.0002 \
 	LOAD_TFTP=true \
 	LOAD_SMB=true \
 	RW_SMB_PASS=rwpass \

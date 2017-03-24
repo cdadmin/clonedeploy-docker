@@ -2,6 +2,8 @@
 
 if [ -z "$MYSQL_ROOT_PASS" ]; then
 	sql_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 8)
+else
+	sql_pass=${MYSQL_ROOT_PASS}
 fi
 
 init_mysql() {
