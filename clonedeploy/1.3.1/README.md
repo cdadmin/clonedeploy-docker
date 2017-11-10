@@ -3,11 +3,11 @@
 
 # Official Docker Container for CloneDeploy
 
-This image was created specifically for use with FreeNAS Corral, but should work with any environment that supports macvlan networking.
+*Requires macvlan networking
 
 ## Usage
 
-Before creating the container, be sure that your Docker environment supports macvlan networking.  FreeNAS Corral has this configured by default.  Port forwarding / NAT is not an ideal fit for CloneDeploy due to DHCP/Proxy requests, Multicasting, etc, and the macvlan enables CloneDeploy to be accessed directly via a static ip.  It is also very important to have your storage setup properly before you start uploading images, otherwise you will most likely use a lot of storage somewhere you were not supposed to.
+Before creating the container, be sure that your Docker environment supports macvlan networking.  Port forwarding / NAT is not an ideal fit for CloneDeploy due to DHCP/Proxy requests, Multicasting, etc, and the macvlan enables CloneDeploy to be accessed directly via a static ip.  It is also very important to have your storage setup properly before you start uploading images, otherwise you will most likely use a lot of storage somewhere you were not supposed to.
 
 ## Data Persistence
 ##### Application Folder: 
@@ -42,6 +42,3 @@ Everytime the container is started, the SMB is share is recreated.  The read onl
 ##### MYSQL_ROOT_PASS
 If database directory is empty the root password will be initialized with this value.  If it is empty, a random password is generated.  This value has no affect if the database directory is not empty.
 
-For more detailed information specific to FreeNAS Corral [check here](http://clonedeploy.org/docs/install-on-freenas-corral/)
-
-For more detailed information specific to Docker [check here](http://clonedeploy.org/docs/install-with-docker/)
